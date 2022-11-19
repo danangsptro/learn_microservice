@@ -5,6 +5,11 @@ const base64Img = require('base64-img')
 const { Media } = require('../models')
 const fs = require('fs')
 
+
+router.get('/test', async(req, rrs) => {
+  console.log('hallo')
+})
+
 router.get('/', async (req, res) => {
   const media = await Media.findAll({
     attributes: ['id', 'image'] /*/ If show data specifitaion  /*/
