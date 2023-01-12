@@ -22,6 +22,7 @@ Route::delete('mentors/{id}', 'MentorController@destory');
 
 Route::post('courses', 'CourseController@create');
 Route::put('courses/{id}', 'CourseController@update');
+Route::get('courses/{id}', 'CourseController@show');
 Route::get('courses', 'CourseController@index');
 Route::delete('courses/{id}', 'CourseController@destroy');
 
@@ -42,3 +43,7 @@ Route::delete('image-courses/{id}', 'ImageCourceController@destroy');
 
 Route::post('my-courses', 'MyCourseController@create');
 Route::get('my-courses', 'MyCourseController@index');
+
+Route::post('reviews', 'ReviewController@create');
+Route::put('reviews/{id}', 'ReviewController@update');
+Route::delete('reviews/{id}', 'ReviewController@destroy');
