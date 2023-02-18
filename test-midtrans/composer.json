@@ -1,0 +1,17 @@
+{
+    "name": "user/test-midtrans",
+    "autoload": {
+        "psr-4": {
+            "User\\TestMidtrans\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "danangsptro",
+            "email": "danangsaputro300@gmail.com"
+        }
+    ],
+    "require": {
+        "midtrans/midtrans-php": "^2.5"
+    }
+}
