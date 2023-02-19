@@ -13,7 +13,7 @@ class CreateOrdersTabel extends Migration
      */
     public function up()
     {
-        Schema::create('orders_tabel', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('status')->default('pending');
             $table->integer('user_id');
