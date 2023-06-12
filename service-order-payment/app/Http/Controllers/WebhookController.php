@@ -53,7 +53,7 @@ class WebhookController extends Controller
             if ($fraudStatus == 'challenge') {
                 $order->status = 'challenge';
             } else if ($fraudStatus == 'accept') {
-                $order->status = 'status';
+                $order->status = 'success';
             }
         } else if ($transactionStatus == 'settlement') {
             $order->status = 'status';

@@ -1,19 +1,15 @@
 const apiAdapter = require('../../apiAdaptor')
-const { URL_SERVICE_COURSE } = process.env
-const api = apiAdapter(URL_SERVICE_COURSE)
+const { URL_SERVICE_ORDER_PAYMENT } = process.env
+const api = apiAdapter(URL_SERVICE_ORDER_PAYMENT)
 
 module.exports = async (req, res) => {
     try {
-        const userId = req.user.data.id
-        const courseId = req.body.course_id
-
-        const myCourse = await api.post('/api/my-courses/', {
-            user_id: userId,
-            course_id: courseId
+        const userId = req.user.data.id;
+        const orders = await api.get('/api/orders', {
+            params: { user_id: userId }
         })
-        return res.json(myCourse.data)
+        return res.json(orders.data)
     } catch (error) {
-        console.log(error,'error hello')
 
         if (error.code === 'ECONNREFUSED') {
             return res
